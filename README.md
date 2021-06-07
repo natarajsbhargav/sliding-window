@@ -6,8 +6,8 @@ Sliding Log rate limiting involves tracking a time stamped log for each consumer
 
 The advantage of this algorithm is that it does not suffer from the boundary conditions of fixed windows. The rate limit will be enforced precisely and because the sliding log is tracked for each consumer, you don't have the rush effect that challenges fixed windows. However, it can be very expensive to store an unlimited number of logs for every request. It's also expensive to compute because each request requires calculating a summation over the consumers prior requests, potentially across a cluster of servers. As a result, it does not scale well to handle large bursts of traffic or denial of service attacks.
 
-Please refer to the [Understanding Rate Limiting Algorithms](https://nataraj-srikantaiah.medium.com/understanding-rate-limiting-algorithms-2244c302025a) blog where the Sliding Log and other algorithms have been explained in detail.
+Please refer to the [Understanding Rate Limiting Algorithms](https://bhargav-journal.blogspot.com/2020/12/understanding-rate-limiting-algorithms.html) blog where the Sliding Log and other algorithms have been explained in detail.
 
 ## Sliding Log Algorithm - RateLimiter Spring Boot Project
 
-Refer to the [Rate Limiter Implementation - Sliding Log Algorithm](https://nataraj-srikantaiah.medium.com/rate-limiter-implementation-sliding-log-algorithm-55299fae2a5c) for step by step implementation details.
+Refer to the [Rate Limiter Implementation - Sliding Log Algorithm](https://bhargav-journal.blogspot.com/2021/01/rate-limiter-sliding-log.html) for step by step implementation details.
